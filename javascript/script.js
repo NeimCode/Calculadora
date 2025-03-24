@@ -1,5 +1,5 @@
 function limpiarNum() {
-    document.getElementById('display').value = '0'; //Limpia el contenido a 0, básicamente es el clear, haha '-'.
+    document.getElementById('display').value = ''; //Limpia el contenido a 0, básicamente es el clear, haha '-'.
 }
 
 
