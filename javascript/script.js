@@ -4,33 +4,27 @@ function limpiarNum() {
 
 
 
+function numeroAEnsenyar(value) {
+    var sound = new Audio("meowrgh.mp3");  
+    sound.play();
 
-    function numeroAEnsenyar(value) { //En esto se hace la magia, se le pasa el valor al display, y si el display es 0, pues se le pasa el valor.
-        var sound = new  Audio("meowrgh.mp3");  
-        sound.play();
-        let display = document.getElementById('display');
+    let display = document.getElementById('display');
     let ultimoCaracter = display.value.slice(-1);
-    let primerCaracter = display.value.slice(0);
 
-        if (display.value === '0') {
-            display.value = value; 
-        } else {
-            if(['+', '*', '/', '-', '.'].includes(value) && ['+', '*', '/', '-', '.'].includes(ultimoCaracter)) {
-                return;   
-            }
-            }
-            display.value += value; 
-        
-        
-    
-    //Si hay un símbolo como +, *, - o /, nos interesa que no se repita consecutivamente, ya que no es lo mismo hacer 6--2, que -6-2
-    //¿Entonces cómo podemos saberlo? que no se repita el numero... 
-    
+    if (display.value === '0') {
+        if (!['+', '*', '/', '-', '.'].includes(value)) {
+            display.value = value;
+        }
+        return;
+    }
 
-    
-    
-    
+    if (['+', '*', '/', '-', '.'].includes(value) && ['+', '*', '/', '-', '.'].includes(ultimoCaracter)) {
+        return;
+    }
+
+    display.value += value;
 }
+
 function calcularResultado() {
     let display = document.getElementById('display'); //Pasa el display
     let result = eval(display.value); //Calculamos el resultado, eval seusa para evaluar la expresión como una matematica normal y así calcularla.
