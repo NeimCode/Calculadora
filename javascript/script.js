@@ -10,6 +10,8 @@ function limpiarNum() {
         sound.play();
         let display = document.getElementById('display');
     let ultimoCaracter = display.value.slice(-1);
+    let primerCaracter = display.value.slice(0);
+
         if (display.value === '0') {
             display.value = value; 
         } else {
