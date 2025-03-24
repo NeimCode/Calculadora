@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Gráfica</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="icon" type="/favicon.ico">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./javascript/script.js"></script>
 
 </head>
 <body>
     <div class="calculator">
         <div class="miau"><h1>Meow</h1></div>
-        <div class="display" id="display">0</div>
+        <input type="text" class="display" id="display" placeholder="0" readonly maxlength="10"> 
+
         <div class="buttons">
             <button onclick="numeroAEnsenyar('7')">7</button>
             <button onclick="numeroAEnsenyar('8')">8</button>
@@ -28,7 +30,7 @@
             <button onclick="numeroAEnsenyar('0')" class="wide">0</button>
             <button onclick="numeroAEnsenyar('.')">.</button>
             <button onclick="numeroAEnsenyar('+')">+</button>
-            <button onclick="limpiarNum()" class="wide">Limpiar</button>
+            <button onclick="limpiarNum()" class="wide">C</button>
             <button onclick="calcularResultado()" class="wide">=</button>
         </div>
     </div>
